@@ -7,7 +7,11 @@ class Inventory:
 
     def update_product(self, product_id, name=None, category=None, price=None, quantity=None):
         if product_id in self.__products:
-            self.__products[product_id].update_details(name, category, price, quantity)
+            self.__products[product_id].update_details(name, category, price, quantity)\
+                
+    def update_quality(self, product_id, quantity):
+        if product_id in self.__products:
+            self.__products[product_id].update_quantity(quantity)
         
     def remove_product(self, product_id):
         if product_id in self.__products:

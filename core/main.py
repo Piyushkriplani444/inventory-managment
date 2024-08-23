@@ -44,7 +44,7 @@ def main():
             sale = Sale(transaction_id, product_id, quantity, price, date)
             transactions.append(sale)
             alltransactions.append(sale)
-            inventory.update_product(product_id, -quantity)
+            inventory.update_quality(product_id, -quantity)
         elif choice == '6':
             transaction_id = input("Enter transaction ID: ")
             product_id = input("Enter product ID: ")
@@ -55,7 +55,7 @@ def main():
             return_transaction = Return(transaction_id, product_id, quantity, price, date, reason)
             transactions.append(return_transaction)
             alltransactions.append(return_transaction)
-            inventory.update_product(product_id, quantity)
+            inventory.update_quality(product_id, quantity)
         elif choice == '7':
             invoice_id = input("Enter invoice ID: ")
             customer_id = input("Enter customer ID: ")
