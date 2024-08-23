@@ -14,9 +14,9 @@ class CSVGenerator:
             details = transaction.get_details()
             dataset.append(details)
         # Extract the headers from the keys of the first dictionary
-        print(dataset)
-        headers = dataset[0].keys()
-        print(headers)
+        
+        headers =  ['transaction_id', 'product_id', 'quantity', 'price', 'date','reason']
+    
         with open(self.filename, 'w', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=headers)
             writer.writeheader()
