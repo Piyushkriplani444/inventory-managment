@@ -1,7 +1,7 @@
-# bad_words
+# Inventory Managment
 
 To run the code, please clone the repository
-Move to bad_words directory
+Move to inventory-managment directory
 
 ```
 cd inventory-managment
